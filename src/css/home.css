@@ -1,0 +1,55 @@
+.titleBar h1{
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    color: #fffffe;
+    letter-spacing: 8px;
+}
+
+.btn-header{
+    padding: 5px 15px;
+    transition: 0.2s;
+}
+
+.btn-header:hover{
+    background-color: rgba(255, 255, 254, 0.2);
+    transition: 0.2s;
+}
+
+.btn-header_close:hover{
+    background-color: rgba(224, 75, 75, 0.4);
+    transition: 0.2s;
+}
+
+.topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.titleBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 0px 0.09px rgba(255, 255, 254, 1);
+    -moz-box-shadow: 0px 0px 0px 0.09px rgba(255, 255, 254, 1);
+    box-shadow: 0px 0px 0px 0.09px rgba(255, 255, 254, 1);
+    padding: 8px 0;
+}
+
+.topBar-menu{
+    display: flex;
+}
+
+.topBar-manipulation{
+    display: flex;
+}
+
+.dragWindow {
+    width: 100%;
+}
+
+.topBar > .dragWindow {
+    -webkit-app-region: drag;
+}
