@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/overcast/jquery-ui.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../src/css/index.css">
@@ -15,33 +16,102 @@
       <div class="topBar">
         <div class="topBar-menu">
           <button id="buttonMenu" class="btn-header">
-            <img src="img/menu.svg" alt="" width="16" height="16">
+            <img src="img/menu.svg" alt="" width="14" height="14">
           </button>
         </div>
         <div class="dragWindow"></div>
         <div class="topBar-manipulation">
           <button id="buttonRolleDown" class="btn-header" title="Minimize">
-            <img src="img/rolle-down.svg" alt="" width="16" height="16">
+            <img src="img/rolle-down.svg" alt="" width="14" height="14">
           </button>
           <button id="buttonSquare" class="btn-header MaximizeBtn" title="Maximize">
-            <img src="img/square.svg" alt="" width="16" height="16"> 
+            <img src="img/square.svg" alt="" width="14" height="14"> 
           </button>
           <button id="buttonClose" class="btn-header btn-header_close" title="Close">
-            <img src="img/close.svg" alt="" width="16" height="16">
+            <img src="img/close.svg" alt="" width="14" height="14">
           </button>
         </div>
       </div>
       <div class="titleBar">
         <h1>LEGEND</h1>
-      </div>
-      <div class="contentArea">
-        <div class="contentPages">
-
+        <div class="titleaBar-buttons">
+          <button id="addWidget" class="addWidget-button">
+            <svg width="16" height="16" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_8:7)">
+              <path d="M9.3 2.60004C6.9 4.00004 3.9 7.00004 2.5 9.40004L0 13.7V117.9C0 219.3 0.1 222.2 2 225.9C4.4 230.7 9 234.6 13.8 236C19.2 237.4 217.1 237.4 222.5 235.9C227.7 234.4 234.4 227.7 235.9 222.5C237.4 217.1 237.4 19.2 236 13.8C234.6 9.00004 230.7 4.40004 225.9 2.00004C222.2 0.100039 219.3 3.85426e-05 117.8 3.85426e-05H13.5L9.3 2.60004ZM196 118V196H118H40V118V40H118H196V118Z" fill="#A7A9BE"/>
+              <path d="M285.9 1.99997C281.2 4.49997 277.3 9.09997 276 13.8C274.6 19.2 274.6 217.1 276.1 222.5C277.6 227.8 284.3 234.5 289.7 235.9C292.7 236.7 323 237 396.2 236.8C496.5 236.5 498.6 236.5 501.9 234.5C503.8 233.4 506.7 230.8 508.4 228.7L511.5 224.8L511.8 119.3L512 13.7L509.5 9.39997C508 6.79997 505.2 3.99997 502.6 2.49997L498.3 -2.79436e-05H393.9C293 0.0999721 289.4 0.199972 285.9 1.99997ZM472 118V196H394H316V118V40H394H472V118Z" fill="#A7A9BE"/>
+              <path d="M12.7 276.5C7.9 278.1 4.4 281.3 1.9 286.2C0.1 289.8 0 293.7 0 394.1V498.3L2.5 502.6C4 505.2 6.8 508 9.4 509.5L13.7 512L119.3 511.8L224.8 511.5L228.7 508.4C230.8 506.7 233.4 503.8 234.5 501.9C236.5 498.6 236.5 496.5 236.8 396.2C237 323 236.7 292.7 235.9 289.7C234.5 284.3 227.8 277.6 222.5 276.1C219.7 275.3 188.5 275 117.5 275C34.6 275.1 15.8 275.3 12.7 276.5ZM196 394V472H118H40V394V316H118H196V394Z" fill="#A7A9BE"/>
+              <path d="M388 276.1C382.8 277.7 378 281.7 375.9 286.4C374.2 290.2 374 293.6 374 332.2V374H332.3C293.6 374 290.2 374.2 286.4 375.9C281.4 378.2 277.6 383 276 388.9C273.9 397 277.2 405.8 284.3 410.7L288.3 413.5L331.1 413.8L373.9 414.1L374.2 456.9L374.5 499.7L377.4 503.8C381 509 387 512 393.8 512C402.6 512 408.5 508.3 412.1 500.5C413.8 496.8 414 493.3 414 455.2V414H455.3C501.5 414 501.3 414 507.7 406.7C515.6 397.7 512.4 381.3 501.8 376.1C497.5 374.1 496.1 374 455.7 374H414.1L413.8 331.2L413.5 288.3L410.7 284.3C405.8 277.2 396.1 273.7 388 276.1Z" fill="#A7A9BE"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_8:7">
+              <rect width="512" height="512" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            <p>Добавить виджит</p>
+          </button>
+          <!-- <button title="Profile">
+            <img src="img/profile-user.svg" alt="" width="20" height="20">
+          </button> -->
+        </div>
+        <div class="widgetPanel">
+          <button>
+            <img src="img/clock.svg" alt="" width="14" height="14">
+            <p>Таймлайн</p>
+          </button>
+          <button>
+            <img src="img/pomodoro.svg" alt="" width="14" height="14">
+            <p>Помодоро</p>
+          </button>
+          <button>
+            <img src="img/category.svg" alt="" width="14" height="14">
+            <p>Категории</p>
+          </button>
+          <button>
+            <img src="img/task.svg" alt="" width="14" height="14">
+            <p>Задачи</p>
+          </button>
+          <button>
+            <img src="img/juggling.svg" alt="" width="14" height="14">
+            <p>Активность</p>
+          </button>
+          <button>
+            <img src="img/categories.svg" alt="" width="14" height="14">
+            <p>Зеттелькастен</p>
+          </button>
+          <button>
+            <img src="img/notes.svg" alt="" width="14" height="14">
+            <p>Заметки</p>
+          </button>
         </div>
       </div>
     </div>
     <div id="root">
     </div>
+
+    <footer>
+      <div class="time-clock">
+        <p>
+          07:04:30
+        </p>
+      </div>
+
+      <div class="footer-content">
+        <button class="list-changes">
+          <img src="img/box-birth.svg" alt="" width="16" height="16">
+          <p>Список изменений</p>
+        </button>
+        <button class="feedback">
+          <img src="img/mail.svg" alt="" width="16" height="16">
+          <p>Обратная связь</p>
+        </button>
+        <button class="help">
+          <img src="img/help.svg" alt="" width="16" height="16">
+          <p>Помощь</p>
+        </button>
+      </div>
+    </footer>
     <script src="../build/js/app.js"></script>
     <script src="../src/js/appFunctions.js"></script>
   </body>

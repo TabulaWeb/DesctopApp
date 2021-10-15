@@ -5,6 +5,12 @@
     font-weight: 500;
     color: #fffffe;
     letter-spacing: 8px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
 }
 
 .btn-header{
@@ -31,11 +37,18 @@
 .titleBar{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    position: relative;
     -webkit-box-shadow: 0px 0px 0px 0.09px rgba(255, 255, 254, 1);
     -moz-box-shadow: 0px 0px 0px 0.09px rgba(255, 255, 254, 1);
     box-shadow: 0px 0px 0px 0.09px rgba(255, 255, 254, 1);
     padding: 8px 0;
+    align-items: center;
+}
+
+.titleaBar-buttons {
+    z-index: 2;
+    display: flex;
 }
 
 .topBar-menu{
@@ -52,4 +65,96 @@
 
 .topBar > .dragWindow {
     -webkit-app-region: drag;
+}
+
+.addWidget-button {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 0;
+}
+
+.addWidget-button p {
+    margin-left: 8px;
+    color: #a7a9be;
+    font-size: 12px;
+
+}
+
+.addWidget-button:hover p{
+    color: #fff;
+} 
+
+.addWidget-button:hover path{
+    fill: #fff;
+}
+
+.widgetPanel {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 175px;
+    top: 40px;
+    right: 15px;
+    padding: 4px 0;
+    border-radius: 5px;
+    background-color: #171624;
+    transition: 0.2s;
+}
+
+.active{
+    display: flex;
+    transition: 0.2s;
+}
+
+.widgetPanel button {
+    display: flex;
+    align-items: center;
+    padding: 4px 14px;
+}
+
+.widgetPanel button:hover {
+    background-color: #222136;
+}
+
+.widgetPanel p{
+    text-align: left;
+    margin-left: 8px;
+    color: #a7a9be;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: #171624;
+    padding: 4px 0;
+}
+
+.time-clock p{
+    color: #a7a9be;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 0 15px;
+    margin-right: 15px;
+}
+
+.footer-content button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.footer-content button p{
+    margin-left: 8px;
+    font-size: 13px;
+    color: #a7a9be;
 }

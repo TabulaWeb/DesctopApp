@@ -12,6 +12,10 @@ ol[class] {
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 /* Убираем внешние отступы */
 body,
 h1,
@@ -36,6 +40,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  position: relative;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -51,7 +56,6 @@ a:not([class]) {
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
   display: block;
 }
 
@@ -72,6 +76,20 @@ button{
     background: none;
     border: 0;
     cursor: pointer;
+}
+
+#root{
+  overflow: auto;
+}
+
+#draggable {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  border-radius: 50%;
+  background: blue;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */

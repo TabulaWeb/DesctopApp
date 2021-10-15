@@ -32,3 +32,11 @@ ipc.on('isRestored', () => {
 document.querySelector('#buttonClose').addEventListener('click', ()=>{
     ipc.send('closeApp')
 })
+
+addWidget.addEventListener('click', () => {
+    if(document.querySelector('.widgetPanel').classList.contains('active')){
+        document.querySelector('.widgetPanel').classList.remove('active')
+    } else {
+        document.querySelector('.widgetPanel').classList.add('active')
+    }
+})
